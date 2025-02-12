@@ -3,7 +3,7 @@ import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Post, Put, 
 import { Category } from './schema/category.schema';
 import { CreateCategoryDto } from './dtos/create-category.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { createParseFilePipe } from 'src/common/files/files-validation-factory';
+import { createParseFilePipe } from '../common/files/files-validation-factory';
 import { UpdateCategoryDto } from './dtos/update-category.dto';
 import { ParseObjectIdPipe } from 'src/common/pipes/parse-objectid.pipe';
 import { ICategoryService } from './interfaces/category.interface';

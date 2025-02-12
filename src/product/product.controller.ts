@@ -4,7 +4,7 @@ import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post
 import { Product } from './schema/product.schema';
 import { CreateProductDto } from './dtos/create-product.dto';
 import { UpdateProductDto } from './dtos/update-product.dto';
-import { createParseFilePipe } from 'src/common/files/files-validation-factory';
+import { createParseFilePipe } from '../common/files/files-validation-factory';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
 import { Roles } from 'src/common/decorator/roles.decorator';
 import { Role } from 'src/common/enums/role.enum';

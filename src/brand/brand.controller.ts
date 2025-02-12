@@ -5,7 +5,7 @@ import { Brand } from './schema/brand.schema';
 import { CreateBrandDto } from './dtos/create-brand.dto';
 import { UpdateBrandDto } from './dtos/update-brand.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { createParseFilePipe } from 'src/common/files/files-validation-factory';
+import { createParseFilePipe } from '../common/files/files-validation-factory';
 import { ParseObjectIdPipe } from 'src/common/pipes/parse-objectid.pipe';
 import { Roles } from 'src/common/decorator/roles.decorator';
 import { Role } from 'src/common/enums/role.enum';
