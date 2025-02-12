@@ -5,14 +5,12 @@ import { CreateCategoryDto } from './dtos/create-category.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { createParseFilePipe } from 'src/common/files/files-validation-factory';
 import { UpdateCategoryDto } from './dtos/update-category.dto';
-import { Types } from 'mongoose';
 import { ParseObjectIdPipe } from 'src/common/pipes/parse-objectid.pipe';
 import { ICategoryService } from './interfaces/category.interface';
 import { Roles } from 'src/common/decorator/roles.decorator';
 import { Role } from 'src/common/enums/role.enum';
 import { AuthGuard } from 'src/common/guards/auth.guard';
 import { RolesGuard } from 'src/common/guards/roles.guard';
-import { Request } from 'express';
 import { CustomRequest } from 'src/common/interfaces/custom-request.interface';
 
 @Controller('category')
