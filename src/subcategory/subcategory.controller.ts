@@ -6,12 +6,12 @@ import { FileInterceptor } from '@nestjs/platform-express';
 import { createParseFilePipe } from '../common/files/files-validation-factory';
 import { IsubCategoryService } from './interfaces/subcategory.interface';
 import { SubcategoryService } from './subcategory.service';
-import { ParseObjectIdPipe } from '@/common/pipes/parse-objectid.pipe';
-import { Role } from '@/common/enums/role.enum';
-import { Roles } from '@/common/decorator/roles.decorator';
-import { AuthGuard } from '@/common/guards/auth.guard';
-import { RolesGuard } from '@/common/guards/roles.guard';
-import { CustomRequest } from '@/common/interfaces/custom-request.interface';
+import { ParseObjectIdPipe } from '../common/pipes/parse-objectid.pipe';
+import { Role } from '../common/enums/role.enum';
+import { Roles } from '../common/decorator/roles.decorator';
+import { AuthGuard } from '../common/guards/auth.guard';
+import { RolesGuard } from '../common/guards/roles.guard';
+import { CustomRequest } from '../common/interfaces/custom-request.interface';
 
 @Controller('category/:categoryId/subcategory')
 export class SubcategoryController implements IsubCategoryService {

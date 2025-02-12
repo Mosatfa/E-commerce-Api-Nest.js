@@ -7,11 +7,11 @@ import { createParseFilePipe } from '../common/files/files-validation-factory';
 import { UpdateCategoryDto } from './dtos/update-category.dto';
 import { ParseObjectIdPipe } from 'src/common/pipes/parse-objectid.pipe';
 import { ICategoryService } from './interfaces/category.interface';
-import { Roles } from '@/common/decorator/roles.decorator';
-import { Role } from '@/common/enums/role.enum';
-import { AuthGuard } from '@/common/guards/auth.guard';
-import { RolesGuard } from '@/common/guards/roles.guard';
-import { CustomRequest } from '@/common/interfaces/custom-request.interface';
+import { Roles } from '../common/decorator/roles.decorator';
+import { Role } from '..//common/enums/role.enum';
+import { AuthGuard } from '../common/guards/auth.guard';
+import { RolesGuard } from '../common/guards/roles.guard';
+import { CustomRequest } from '../common/interfaces/custom-request.interface';
 
 @Controller('category')
 export class CategoryController implements ICategoryService {

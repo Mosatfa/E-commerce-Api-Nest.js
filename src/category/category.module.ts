@@ -3,10 +3,10 @@ import { CategoryController } from './category.controller';
 import { CategoryService } from './category.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Category, CategorySchema } from './schema/category.schema';
-import { CloudinaryService } from '@/cloudinary/cloudinary.service';
+import { CloudinaryService } from '../cloudinary/cloudinary.service';
 import { JwtService } from '@nestjs/jwt';
-import { UserService } from '@/user/user.service';
-import { User, UserSchema } from '@/user/schema/user.schema';
+import { UserService } from '../user/user.service';
+import { User, UserSchema } from '../user/schema/user.schema';
 
 @Module({
   imports: [MongooseModule.forFeature([

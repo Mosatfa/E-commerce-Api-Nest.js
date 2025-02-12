@@ -3,11 +3,11 @@ import { CouponService } from './coupon.service';
 import { CouponController } from './coupon.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Coupon, CouponSchema } from './schema/coupon.schema';
-import { CloudinaryService } from '@/cloudinary/cloudinary.service';
-import { User, UserSchema } from '@/user/schema/user.schema';
+import { CloudinaryService } from '../cloudinary/cloudinary.service';
+import { User, UserSchema } from '../user/schema/user.schema';
 import { JwtService } from '@nestjs/jwt';
-import { UserService } from '@/user/user.service';
-import { Cart, CartSchema } from '@/cart/schema/cart.schema';
+import { UserService } from '../user/user.service';
+import { Cart, CartSchema } from '../cart/schema/cart.schema';
 
 @Module({
   imports: [MongooseModule.forFeature([
