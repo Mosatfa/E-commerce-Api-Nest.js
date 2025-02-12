@@ -5,7 +5,7 @@ import { Product } from './schema/product.schema';
 import { CreateProductDto } from './dtos/create-product.dto';
 import { UpdateProductDto } from './dtos/update-product.dto';
 import { createParseFilePipe } from 'src/common/files/files-validation-factory';
-import { FileFieldsInterceptor, FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
+import { FileFieldsInterceptor } from '@nestjs/platform-express';
 import { Roles } from 'src/common/decorator/roles.decorator';
 import { Role } from 'src/common/enums/role.enum';
 import { AuthGuard } from 'src/common/guards/auth.guard';
@@ -31,7 +31,7 @@ export class ProductController implements IProductService {
         { name: 'mainImage', maxCount: 1 },
         { name: 'subImages', maxCount: 5 },
     ]))
-    async createProduct(@Req() req: CustomRequest, @Body() createProductDto: CreateProductDto, @UploadedFiles() files: { mainImage: Express.Multer.File, subImages?: Express.Multer.File[] }
+    async createProduct(@Req() req: CustomRequest, @Body() createProductDto: CreateProductDto, @UploadedFiles(createParseFilePipe('2MB', ['jpeg', 'png', 'jpg'], true)) files: { mainImage: Express.Multer.File, subImages?: Express.Multer.File[] }
     ): Promise<Product> {
         return await this.productService.createProduct(req, createProductDto, files)
     };
@@ -44,7 +44,7 @@ export class ProductController implements IProductService {
         { name: 'mainImage', maxCount: 1 },
         { name: 'subImages', maxCount: 5 },
     ]))
-    async updateProduct(@Req() req: CustomRequest, @Param('productId', ParseObjectIdPipe) productId: string, @Body() updateProductDto: UpdateProductDto, @UploadedFiles() files: { mainImage?: Express.Multer.File, subImages?: Express.Multer.File[] }
+    async updateProduct(@Req() req: CustomRequest, @Param('productId', ParseObjectIdPipe) productId: string, @Body() updateProductDto: UpdateProductDto, @UploadedFiles(createParseFilePipe('2MB', ['jpeg', 'png', 'jpg'], true)) files: { mainImage?: Express.Multer.File, subImages?: Express.Multer.File[] }
     ): Promise<Product> {
         return await this.productService.updateProduct(req, productId, updateProductDto, files)
     };
