@@ -5,8 +5,8 @@ import { BrandService } from './brand.service';
 import { Brand, BrandSchema } from './schema/brand.schema';
 import { CloudinaryService } from 'src/cloudinary/cloudinary.service';
 import { JwtService } from '@nestjs/jwt';
-import { UserService } from '../../src/user/user.service';
-import { User, UserSchema } from '../../src/user/schema/user.schema';
+import { UserService } from '../user/user.service';
+import { User, UserSchema } from '../user/schema/user.schema';
 
 @Module({
   imports: [MongooseModule.forFeature([

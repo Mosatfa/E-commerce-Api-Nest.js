@@ -4,7 +4,7 @@ import { SubcategoryController } from './subcategory.controller';
 import { SubcategoryService } from './subcategory.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Subcategory, SubcategorySchema } from './schema/subcategory.schema';
-import { Category, CategorySchema } from '../../src/category/schema/category.schema';
+import { Category, CategorySchema } from '../category/schema/category.schema'
 import { CloudinaryService } from 'src/cloudinary/cloudinary.service';
 import { JwtService } from '@nestjs/jwt';
 import { UserService } from 'src/user/user.service';
