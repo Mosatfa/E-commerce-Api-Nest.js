@@ -6,12 +6,12 @@ import { CreateProductDto } from './dtos/create-product.dto';
 import { UpdateProductDto } from './dtos/update-product.dto';
 import { createParseFilePipe } from '../common/files/files-validation-factory';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
-import { Roles } from 'src/common/decorator/roles.decorator';
-import { Role } from 'src/common/enums/role.enum';
-import { AuthGuard } from 'src/common/guards/auth.guard';
-import { RolesGuard } from 'src/common/guards/roles.guard';
-import { CustomRequest } from 'src/common/interfaces/custom-request.interface';
-import { ParseObjectIdPipe } from 'src/common/pipes/parse-objectid.pipe';
+import { Roles } from '@/common/decorator/roles.decorator';
+import { Role } from '@/common/enums/role.enum';
+import { AuthGuard } from '@/common/guards/auth.guard';
+import { RolesGuard } from '@/common/guards/roles.guard';
+import { CustomRequest } from '@/common/interfaces/custom-request.interface';
+import { ParseObjectIdPipe } from '@/common/pipes/parse-objectid.pipe';
 
 @Controller('product')
 export class ProductController implements IProductService {

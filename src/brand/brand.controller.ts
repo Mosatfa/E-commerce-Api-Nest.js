@@ -6,12 +6,12 @@ import { CreateBrandDto } from './dtos/create-brand.dto';
 import { UpdateBrandDto } from './dtos/update-brand.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { createParseFilePipe } from '../common/files/files-validation-factory';
-import { ParseObjectIdPipe } from 'src/common/pipes/parse-objectid.pipe';
-import { Roles } from 'src/common/decorator/roles.decorator';
-import { Role } from 'src/common/enums/role.enum';
-import { AuthGuard } from 'src/common/guards/auth.guard';
-import { RolesGuard } from 'src/common/guards/roles.guard';
-import { CustomRequest } from 'src/common/interfaces/custom-request.interface';
+import { ParseObjectIdPipe } from '../../src/common/pipes/parse-objectid.pipe';
+import { Roles } from '../../src/common/decorator/roles.decorator';
+import { Role } from '../../src/common/enums/role.enum';
+import { AuthGuard } from '../../src/common/guards/auth.guard';
+import { RolesGuard } from '../../src/common/guards/roles.guard';
+import { CustomRequest } from '../../src/common/interfaces/custom-request.interface';
 
 @Controller('brand')
 export class BrandController implements IBrandService {

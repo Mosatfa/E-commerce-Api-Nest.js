@@ -5,13 +5,13 @@ import { UpdateCouponDto } from './dtos/update-coupon.dto';
 import { CouponService } from './coupon.service';
 import { ICouponService } from './interfaces/coupon.interface';
 import { ParseObjectIdPipe } from 'src/common/pipes/parse-objectid.pipe';
-import { Roles } from 'src/common/decorator/roles.decorator';
-import { Role } from 'src/common/enums/role.enum';
-import { AuthGuard } from 'src/common/guards/auth.guard';
-import { RolesGuard } from 'src/common/guards/roles.guard';
-import { CustomRequest } from 'src/common/interfaces/custom-request.interface';
+import { Roles } from '@/common/decorator/roles.decorator';
+import { Role } from '@/common/enums/role.enum';
+import { AuthGuard } from '@/common/guards/auth.guard';
+import { RolesGuard } from '@/common/guards/roles.guard';
+import { CustomRequest } from '@/common/interfaces/custom-request.interface';
 import { ApplyCouponDto } from './dtos/apply-coupon.dto';
-import { Cart } from 'src/cart/schema/cart.schema';
+import { Cart } from '@/cart/schema/cart.schema';
 
 
 @Controller('coupon')

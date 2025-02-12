@@ -1,17 +1,17 @@
-import { Roles } from 'src/common/decorator/roles.decorator';
+import { Roles } from '@/common/decorator/roles.decorator';
 import { OrderService } from './order.service';
 import { Body, Controller, HttpCode, HttpStatus, Param, Post, Query, Req, Session, UseGuards } from '@nestjs/common';
-import { Role } from 'src/common/enums/role.enum';
-import { AuthGuard } from 'src/common/guards/auth.guard';
-import { RolesGuard } from 'src/common/guards/roles.guard';
-import { CustomRequest } from 'src/common/interfaces/custom-request.interface';
+import { Role } from '@/common/enums/role.enum';
+import { AuthGuard } from '@/common/guards/auth.guard';
+import { RolesGuard } from '@/common/guards/roles.guard';
+import { CustomRequest } from '@/common/interfaces/custom-request.interface';
 import { Order } from './schema/order.schema';
 import { CreateOrderDto } from './dtos/create-order.dto';
 import { CancleOrderDto } from './dtos/cancle-order.dto';
-import { ParseObjectIdPipe } from 'src/common/pipes/parse-objectid.pipe';
+import { ParseObjectIdPipe } from '@/common/pipes/parse-objectid.pipe';
 import { UpdateOrderStautsDto } from './dtos/update-order.dto';
 import { IOrderService } from './interfaces/order.interface';
-import { Cart } from 'src/cart/schema/cart.schema';
+import { Cart } from '@/cart/schema/cart.schema';
 
 @Controller('order')
 export class OrderController implements IOrderService {

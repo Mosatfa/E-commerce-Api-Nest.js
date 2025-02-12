@@ -1,14 +1,14 @@
 import { ReviewsService } from './reviews.service';
 import { Body, Controller, HttpCode, HttpStatus, Param, Post, Put, Req, UseGuards } from '@nestjs/common';
-import { Roles } from 'src/common/decorator/roles.decorator';
-import { Role } from 'src/common/enums/role.enum';
-import { AuthGuard } from 'src/common/guards/auth.guard';
-import { RolesGuard } from 'src/common/guards/roles.guard';
-import { CustomRequest } from 'src/common/interfaces/custom-request.interface';
+import { Roles } from '@/common/decorator/roles.decorator';
+import { Role } from '@/common/enums/role.enum';
+import { AuthGuard } from '@/common/guards/auth.guard';
+import { RolesGuard } from '@/common/guards/roles.guard';
+import { CustomRequest } from '@/common/interfaces/custom-request.interface';
 import { CreateReviewDto } from './dtos/create-review.dto';
 import { Review } from './schema/review.schema';
 import { UpdateReviewDto } from './dtos/update-review.dto';
-import { ParseObjectIdPipe } from 'src/common/pipes/parse-objectid.pipe';
+import { ParseObjectIdPipe } from '@/common/pipes/parse-objectid.pipe';
 import { IReviewService } from './interfaces/review.interface';
 
 @Controller('reviews')

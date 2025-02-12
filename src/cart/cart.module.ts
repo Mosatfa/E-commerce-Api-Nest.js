@@ -3,10 +3,10 @@ import { CartController } from './cart.controller';
 import { CartService } from './cart.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Cart, CartSchema } from './schema/cart.schema';
-import { User, UserSchema } from 'src/user/schema/user.schema';
-import { UserService } from 'src/user/user.service';
+import { User, UserSchema } from '@/user/schema/user.schema';
+import { UserService } from '@/user/user.service';
 import { JwtService } from '@nestjs/jwt';
-import { Product, ProductSchema } from 'src/product/schema/product.schema';
+import { Product, ProductSchema } from '@/product/schema/product.schema';
 
 @Module({
   imports: [MongooseModule.forFeature([

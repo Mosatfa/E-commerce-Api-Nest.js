@@ -1,15 +1,15 @@
 import { Module } from '@nestjs/common';
 import { OrderController } from './order.controller';
 import { OrderService } from './order.service';
-import { UserService } from 'src/user/user.service';
+import { UserService } from '@/user/user.service';
 import { JwtService } from '@nestjs/jwt';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Order, OrderSchema } from './schema/order.schema';
-import { Cart, CartSchema } from 'src/cart/schema/cart.schema';
-import { Product, ProductSchema } from 'src/product/schema/product.schema';
-import { Coupon, CouponSchema } from 'src/coupon/schema/coupon.schema';
-import { User, UserSchema } from 'src/user/schema/user.schema';
-import { StripeService } from 'src/stripe/stripe.service';
+import { Cart, CartSchema } from '@/cart/schema/cart.schema';
+import { Product, ProductSchema } from '@/product/schema/product.schema';
+import { Coupon, CouponSchema } from '@/coupon/schema/coupon.schema';
+import { User, UserSchema } from '@/user/schema/user.schema';
+import { StripeService } from '@/stripe/stripe.service';
 
 @Module({
   imports: [
