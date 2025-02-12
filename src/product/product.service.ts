@@ -11,7 +11,7 @@ import slugify from 'slugify';
 import { v4 as uuidv4 } from 'uuid';
 import { CustomRequest } from 'src/common/interfaces/custom-request.interface';
 import { User } from 'src/user/schema/user.schema';
-import ApiFeatures from 'src/common/utils/ApiFeatures';
+import ApiFeatures from '../../src/common/utils/ApiFeatures';
 import { Review } from 'src/reviews/schema/review.schema';
 import { IProductService } from './interfaces/product.interface';
 
