@@ -9,7 +9,7 @@ import connectMongo from 'connect-mongo';
 import { v4 as uuidv4 } from 'uuid';
 import * as express from 'express';
 
-async function bootstrap() {
+export default async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.enableCors();
   const configService: ConfigService = app.get(ConfigService);
